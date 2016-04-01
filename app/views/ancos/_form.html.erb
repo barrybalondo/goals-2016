@@ -1,6 +1,5 @@
-<h2>Goals</h2>
-
 <%= form_for @anco do |f| %>
-  <p><%= f.text_field :description %></p>
+	<p><%= f.label :description %>
+  <p><%= f.text_area :description, rows: 2, class: "form-control" %></p>
   <p><%= f.submit "Submit" %></p>
 <% end %>
