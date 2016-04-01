@@ -1,0 +1,4 @@
+<% obj.each do |object| %>
+		<p><%= object.description %></p>
+		<p><%= time_ago_in_words(object.created_at) %> ago</p>
+<% end %>

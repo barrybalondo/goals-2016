@@ -1,0 +1,10 @@
+<h1>Justin's goals</h1>
+<% @justins.each do |justin| %>
+		<p><%= justin.description %></p>
+		<p><%= time_ago_in_words(justin.created_at) %> ago</p>
+		<p>
+			<%= link_to "Edit", edit_justin_path(justin) %>
+			<%= link_to 'Destroy', justin, method: :delete, data: { confirm: 'Are you sure?' } %>
+		</p>
+<% end %>
+

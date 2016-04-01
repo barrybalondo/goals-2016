@@ -1,0 +1,10 @@
+<h1>Anco's goals</h1>
+<% @ancos.each do |anco| %>
+		<p><%= anco.description %></p>
+		<p><%= time_ago_in_words(anco.created_at) %> ago</p>
+		<p>
+			<%= link_to "Edit", edit_anco_path(anco) %>
+			<%= link_to 'Destroy', anco, method: :delete, data: { confirm: 'Are you sure?' } %>
+		</p>
+<% end %>
+

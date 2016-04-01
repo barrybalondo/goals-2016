@@ -1,0 +1,10 @@
+<h1>Neil's goals</h1>
+<% @neils.each do |neil| %>
+		<p><%= neil.description %></p>
+		<p><%= time_ago_in_words(neil.created_at) %> ago</p>
+		<p>
+			<%= link_to "Edit", edit_neil_path(neil) %>
+			<%= link_to 'Destroy', neil, method: :delete, data: { confirm: 'Are you sure?' } %>
+		</p>
+<% end %>
+

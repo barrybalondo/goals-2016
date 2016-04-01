@@ -1,0 +1,10 @@
+<h1>Barry's goals</h1>
+<% @barries.each do |barry| %>
+		<p><%= barry.description %></p>
+		<p><%= time_ago_in_words(barry.created_at) %> ago</p>
+		<p>
+			<%= link_to "Edit", edit_barry_path(barry) %>
+			<%= link_to 'Destroy', barry, method: :delete, data: { confirm: 'Are you sure?' } %>
+		</p>
+<% end %>
+
