@@ -1,10 +1,1 @@
-<%= form_for([@goal.user, @goal]) do |f| %>
-	<p>
-		<%= f.label :desciption %><br>
-		<%= f.text_area :description %>
-	</p>
-
-	<p>
-		<%= f.submit %>
-	</p>
-<% end %>
+<%= render 'form' %>

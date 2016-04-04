@@ -1,6 +1,8 @@
+<% counter = 0 %>
+
 <% @goals.each do |goal| %>
-	<p><%= goal.description %></p>
-	<p><%= time_ago_in_words(goal.updated_at) %> Ago</p>
+	<h4><%= counter = counter + 1 %>) <%= goal.description %></h4>
+	<p>updated <%= time_ago_in_words(goal.updated_at) %> Ago</p>
 
 			
 	<p>
