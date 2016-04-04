@@ -1,6 +1,4 @@
-<% counter = 0  %>
-<% obj.each do |object| %>
-
-	<h3><%= counter = counter + 1 %>) <%= object.description %></h3>
-	<p><%= time_ago_in_words(object.created_at) %> ago</p>
+<% obj.each do |goal| %>
+	<p><%= goal.description %></p>
+	<p><%= time_ago_in_words(goal.updated_at) %> Ago</p>
 <% end %>

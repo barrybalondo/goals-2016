@@ -1,1 +1,1 @@
-Simple web app that our friends use for our yearly goals
+Simple web app that our friends use for our yearly goals.

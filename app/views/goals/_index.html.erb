@@ -1,0 +1,11 @@
+<% @goals.each do |goal| %>
+	<p><%= goal.description %></p>
+	<p><%= time_ago_in_words(goal.updated_at) %> Ago</p>
+
+			
+	<p>
+
+		<%= link_to "Edit", edit_user_goal_path(@user, goal) %> | 
+		<%= link_to "Delete", user_goal_path(@user, goal), method: :delete, class: "button", data: { confirm: "Are you sure?"} %>
+	</p>
+<% end %>

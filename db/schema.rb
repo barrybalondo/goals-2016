@@ -11,30 +11,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160401070102) do
+ActiveRecord::Schema.define(version: 20160401204745) do
 
-  create_table "ancos", force: :cascade do |t|
+  create_table "goals", force: :cascade do |t|
     t.text     "description"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.integer  "user_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
-  create_table "barries", force: :cascade do |t|
-    t.string   "description"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
+  add_index "goals", ["user_id"], name: "index_goals_on_user_id"
 
-  create_table "justins", force: :cascade do |t|
-    t.text     "description"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "neils", force: :cascade do |t|
-    t.text     "description"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+  create_table "users", force: :cascade do |t|
+    t.string   "username"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
 end

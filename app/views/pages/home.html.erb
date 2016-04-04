@@ -1,24 +1,11 @@
-<div class="container box">
-	
-	<div class="col-md-3">
-			<h1>Barry</h1>
-			<%= render 'form', obj: @barries %>
-	</div>
+<h1><%= link_to "Barry", user_path(1) %></h1>
+<%= render 'form', obj: @barry %>
 
-	<div class="col-md-3">
-		<h1>Anco</h1>
-		<%= render 'form', obj: @ancos %>
-	</div>
+<h1><%= link_to "Anco", user_path(2) %></h1>
+<%= render 'form', obj: @anco %>
 
-	<div class="col-md-3">
-		<h1>Neil</h1>
-		<%= render 'form', obj: @neils %>
-	</div>
+<h1><%= link_to "Neil", user_path(3) %></h1>
+<%= render 'form', obj: @neil %>
 
-
-	<div class="col-md-3">
-		<h1>Justin</h1>
-		<%= render 'form', obj: @justins %>
-	</div>
-
-</div>
+<h1><%= link_to "Justin", user_path(4) %></h1>
+<%= render 'form', obj: @justin %>

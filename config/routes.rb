@@ -1,10 +1,9 @@
 Rails.application.routes.draw do
- 
-  root "pages#home" 
 
-  resources :barries
-  resources :neils
-  resources :ancos
-  resources :justins
+  root 'pages#home'
+
+  resources :users, only: [:show] do
+    resources :goals
+  end
 
 end
