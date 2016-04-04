@@ -13,6 +13,18 @@
 
 ActiveRecord::Schema.define(version: 20160401204745) do
 
+  create_table "ancos", force: :cascade do |t|
+    t.text     "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "barries", force: :cascade do |t|
+    t.string   "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "goals", force: :cascade do |t|
     t.text     "description"
     t.integer  "user_id"
@@ -21,6 +33,18 @@ ActiveRecord::Schema.define(version: 20160401204745) do
   end
 
   add_index "goals", ["user_id"], name: "index_goals_on_user_id"
+
+  create_table "justins", force: :cascade do |t|
+    t.text     "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "neils", force: :cascade do |t|
+    t.text     "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "username"
